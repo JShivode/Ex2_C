@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include "my_mat.h"
-#define N 3
+#define N 10
 
 
 
