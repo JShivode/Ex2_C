@@ -1,5 +1,5 @@
 #ifndef N 
-#define N 3
+#define N 10
 #endif
 //A function that receives a matrix from the user:
 void getArr(int mat[N][N]);
