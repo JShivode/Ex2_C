@@ -13,8 +13,8 @@ int mat[N][N];
 char x='1';
 
 
-while (x !='0'){
-printf("What would you like to do\n A enter matrix\n B Enter i and j\n C find shortest path from i to j\n  D print matrix \n 0 to exit\n");
+while (x !='D'){
+printf("What would you like to do\n A enter matrix\n B Enter i and j\n C find shortest path from i to j\n  D print matrix \n D to exit\n");
 scanf("%c", &x);
 if(x=='A'){
 getArr(mat);
@@ -40,9 +40,6 @@ scanf("%d", &j);
 printf("\n the shortest path is:%d\n ", mat[i][j]);
 }
 
-if(x=='D'){
-printMat(mat);
-}
 }
 
 
