@@ -7,6 +7,7 @@
 
 
 int main(){
+  printf("www");
 int i, j;
 int mat[N][N];
 char x='1';
