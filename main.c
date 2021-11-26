@@ -7,7 +7,6 @@
 
 
 int main(){
-printf("This is new");
 int i, j;
 int mat[N][N];
 char x='1';
@@ -25,10 +24,10 @@ printf("\n Enter i and j ");
 scanf("%d",&i);
 scanf("%d", &j);
 if(mat[i][j] !=0){
-printf("\nThere is a path from i to j\n");
+printf("True");
 }
 else{
-printf("\nThere is no path\n");
+printf("False");
 }
 }
 
@@ -37,10 +36,11 @@ floydWarshall(mat);
 printf("\n Enter i and j ");
 scanf("%d",&i);
 scanf("%d", &j);
-printf("\n the shortest path is:%d\n ", mat[i][j]);
+printf("%d", mat[i][j]);
 }
 
 }
 
 
 }
+
