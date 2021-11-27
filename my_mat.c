@@ -4,7 +4,7 @@
 
 //A function that receives a matrix from the user:
 void getArr(int mat[N][N]){
-printf("\n Enter matrix cells");
+//printf("\n Enter matrix cells");
 for (int k=0; k<N; k++){
 for (int l=0; l<N; l++){
 scanf("%d", &mat[k][l]);
