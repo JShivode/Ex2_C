@@ -14,14 +14,19 @@ scanf("%d", &mat[k][l]);
 
 
 void printMat(int mat[N][N]){
+FILE *f;
 for (int i=0; i<N; i++){
 for(int j=0; j<N; j++){
-printf("%d ", mat[i][j]);
+//printf("%d ", mat[i][j]);
+f=fopen("o1.txt","w" );
+fprintf(f,"%d",mat[i][j]);
 if(j==N-1) {
-printf("\n");
+//printf("\n");
+fprintf(f,"\n");
 }
 }
 }
+fclose(f);
 }
 
 int min(int a, int b){
