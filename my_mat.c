@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "my_mat.h"
-
+#define N 10
 
 //A function that receives a matrix from the user:
 void getArr(int mat[N][N]){
-printf("\n Enter matrix cells");
+//printf("\n Enter matrix cells");
 for (int k=0; k<N; k++){
 for (int l=0; l<N; l++){
 scanf("%d", &mat[k][l]);
@@ -12,32 +12,45 @@ scanf("%d", &mat[k][l]);
 }
 }
 
+int min(int a, int b)
+{
+    if (a == 0)
+    {
+        return b;
+    }
+    else if (b == 0)
+    {
+        return a;
+    }
 
-void printMat(int mat[N][N]){
-for (int i=0; i<N; i++){
-for(int j=0; j<N; j++){
-printf("%d ", mat[i][j]);
-if(j==N-1) {
-printf("\n");
-}
-}
-}
-}
-
-int min(int a, int b){
-return (a>b) ? b : a ;
-
+    return (a > b) ? b : a;
 }
 
-void floydWarshall(int arr[N][N]){
-for(int k=0; k<N; k++){
-for(int i=0; i<N; i++){
-for(int j=0; j<N; j++){
-arr[i][j]=min(arr[i][j], arr[i][k]+arr[k][j]);
-if(arr[i][j]==0){
-arr[i][j]=-1;
-}
-}
-}
-}
+void floydWarshall(int mat[N][N])
+{
+
+    for (size_t k = 0; k < N; k++)
+    {
+        for (size_t i = 0; i < N; i++)
+        {
+            for (size_t j = 0; j < N; j++)
+            {
+                if (i == j)
+                {
+                    mat[i][j] = 0;
+                }
+                else if (i == k || j == k ){
+                    continue;
+                }
+                else{
+                    int result = mat[i][k] + mat[k][j];
+                    if (mat[i][k] == 0 || mat[k][j] == 0)
+                    {
+                        result = 0;
+                    }
+                    mat[i][j] = min(mat[i][j], result);
+                }
+            }
+        }
+    }
 }
