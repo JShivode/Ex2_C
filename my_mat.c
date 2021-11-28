@@ -2,9 +2,7 @@
 #include "my_mat.h"
 #define N 10
 
-//A function that receives a matrix from the user:
 void getArr(int mat[N][N]){
-//printf("\n Enter matrix cells");
 for (int k=0; k<N; k++){
 for (int l=0; l<N; l++){
 scanf("%d", &mat[k][l]);
@@ -22,13 +20,11 @@ int min(int a, int b)
     {
         return a;
     }
-
     return (a > b) ? b : a;
 }
 
 void floydWarshall(int mat[N][N])
 {
-
     for (size_t k = 0; k < N; k++)
     {
         for (size_t i = 0; i < N; i++)
