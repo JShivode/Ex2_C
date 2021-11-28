@@ -3,14 +3,10 @@
 #include "my_mat.h"
 #define N 10
 
-
-
-
 int main(){
 int i, j;
 int mat[N][N];
 char x='1';
-
 
 while (x !='D'){
 //printf("What would you like to do\n A enter matrix\n B Enter i and j\n C find shortest path from i to j\n  D print matrix \n D to exit\n");
@@ -38,10 +34,7 @@ scanf("%d",&i);
 scanf("%d", &j);
 printf("%d", mat[i][j]);
 }
-
 }
-
-
 }
 
 
