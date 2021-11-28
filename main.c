@@ -17,11 +17,11 @@ getArr(mat);
 if(x=='B'){
 scanf("%d",&i);
 scanf("%d", &j);
-if(mat[i][j] !=0){
-printf("True");
+if(mat[i][j] >0){
+printf("True\n");
 }
 else{
-printf("False");
+printf("False\n");
 }
 }
 
@@ -29,9 +29,7 @@ if(x=='C'){
 floydWarshall(mat);
 scanf("%d",&i);
 scanf("%d", &j);
-printf("%d", mat[i][j]);
+printf("%d\n", mat[i][j]);
 }
 }
 }
-
-
